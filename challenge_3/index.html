@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
      <header>
-    <h1 align="center">Juan Bahena</h1>
+    <h1 align="center" class="quotes">Juan Bahena</h1>
   </header>
     <style>
           html { 
@@ -14,11 +14,13 @@
 
 .gallery {
    border-radius: 25px;
-    border: 2px solid #ccc;
+    border: 2px solid white;
     padding: 15px; 
     width: 200px;
     height: 225px; 
-    display: inline-block;
+    margin: auto;
+    margin-bottom: 10px;
+    color: white;
 }
 
 .gallery:hover {
@@ -41,6 +43,8 @@ ul {
 }
 .quotes {
   text-align: center;
+  color: white;
+  
 }
 
     </style>
@@ -65,11 +69,17 @@ ul {
   </a>
   <div class="desc">Eating Pizza</div>
 </div>
-<ul>
+<div class="quotes">Interesting facts about me</div>
+<ul class="quotes">
   <li>I've gotten surgery 2x</li>
   <li>I have 2 scars on my head</li>
   <li>I have 6 siblings</li>
 </ul>
-<div class="quotes">Some of my favorite quotes</div>
+<div class="quotes"> <b>Some of my favorite quotes</b></div>
+<ul style="list-style-type:none" class="quotes">
+  <li>Ask not what your country can do for you; ask what you can do for your country-John F. Kennedy</li>
+  <li>My father taught me to work, but he did not teach me to love it.-Abraham Lincoln</li>
+  <li>You cannot uneducate the person who has learned to read. You cannot humiliate the person who feels pride. You cannot oppress the people who are not afraid anymore.-Cesar Chavez</li>
+</ul>
     </body>
 </html>
