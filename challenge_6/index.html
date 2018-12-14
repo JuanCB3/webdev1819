@@ -3,26 +3,31 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Cinzel Decorative";font-size: 22px;}
 .w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+
+.w3-sidebar {width: 120px;background: #000;}
+
 #main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
+
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+.mySlides {display:none;}
+
+.color {
+    background: linear-gradient(to bottom, #666666 0%, #000000 100%);
+}
 </style>
-<body class="w3-black">
+<body class="w3-black color"><font color="white">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center color">
   <!-- Avatar image in top left corner -->
   <img src="https://chicagocrusader.com/wp-content/uploads/sites/2/2017/01/Martin-Luther-King-Jr-1.jpg" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -31,7 +36,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Cinzel Decorative";font-size: 22px;}
     <p>ABOUT</p>
   </a>
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
+    <i class="fa fa-image w3-xxlarge"></i>
     <p>PHOTOS</p>
   </a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
@@ -53,11 +58,42 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Cinzel Decorative";font-size: 22px;}
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header class="w3-container w3-padding-32 w3-center"   id="home">
     <h1 class="w3-jumbo"><span class="w3-hide-small"></span>Martin Luther King Jr.</h1>
-    <p>Civil Rights Activist and Baptist Minister</p>
-    <img src="https://www-images.christianitytoday.com/images/81536.jpg?w=700" alt="boy" class="w3-image" width="992" height="1108">
   </header>
+  
+  <h2 class="w3-center">Civil Rights Activist and Baptist Minister</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://www-images.christianitytoday.com/images/81536.jpg?w=700" style="width:100%">
+  <img class="mySlides" src="https://www.biography.com/.image/t_share/MTQ1MzA0NTY0OTE0OTg4NTk5/martin-luther-king-jr---mini-biography.jpg" style="width:100%">
+  <img class="mySlides" src="https://static1.squarespace.com/static/534db931e4b0039322aff55d/t/58af30d75016e19bc90eda80/1487876316576/maxresdefault.jpg" style="width:100%">
+  <img class="mySlides" src="http://www.pewresearch.org/wp-content/uploads/2015/03/FT_15.03.05_selmaMontgomeryMLK.jpg?w=640" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
@@ -173,6 +209,7 @@ of waiting, your aorta would have been punctured and you would have drowned in y
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
   <!-- End footer -->
   </footer>
+  </font>
 
 <!-- END PAGE CONTENT -->
 </div>
