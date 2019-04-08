@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <title>AgiaCanvas</title>
+ <body>
+ <canvas id="AgiaCanvas" width="400" height="400">
+ </canvas>
+ <script>
+ window.onload = function(){
+ var canvas = document.getElementById("AgiaCanvas"),
+ agia = canvas.getContext("2d");
+
+ var start = 0;
+ setInterval(function(){
+ 
+ start += 4;
+ 
+ agia.fillStyle = "deepSkyBlue";
+ agia.fillRect(0, 0, canvas.width, canvas.height);
+
+  agia.fillStyle = "white";
+ agia.font = "50px Arial";
+ agia.fillText("JB", start, 200);
+
+  }, 40);
+ };
+ </script>
+ </body>
+</html>
